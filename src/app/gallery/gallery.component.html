@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class=" my-3 ">All products:</h1>
+    <div class="row">
+        @for(p of productList; track $index){
+            <div class="card border-dark m-3 p-0 text-white text center" style="max-width: 18rem;">
+                <div class="bg-dark card-header w-auto">{{p.pName}}</div>
+                <div class="card-body green">
+                  <h5 class="card-title">{{p.pPrice}}</h5>
+                  <p class="card-text">{{p.pCat}}</p>
+                </div>
+              </div>
+        }
+    </div>
+</div>
+<div class="d-grid gap-2 col-3 mx-auto "#re>
+  <button class="btn btn-danger m-3" type="button"> recommended products</button>
+</div>
+@defer ( on interaction(re)) {
+  <app-recommended></app-recommended>
+}
+@placeholder {
+  <h3 class="  mb-3 text-center">Do you need more products ? click the button </h3>
+
+}
+

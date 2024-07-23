@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class=" my-1 ">recommended products:</h1>
+    <div class="row">
+        @for(p of recommendedList; track $index){
+            <div class="card border-dark m-3 p-0 text-white text center" style="max-width: 18rem;">
+                <div class="bg-dark card-header w-auto">{{p.pName}}</div>
+                <div class="card-body green">
+                  <h5 class="card-title">{{p.pPrice}}</h5>
+                  <p class="card-text">{{p.pCat}}</p>
+                </div>
+              </div>
+        }
+    </div>
+</div>
